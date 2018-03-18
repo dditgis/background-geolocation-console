@@ -1,12 +1,12 @@
 ftt-location-server:
   image: ftt-location-server
   ports:
-    - "9000"
+    - "3000:9000"
   volumes:
     - "/data/tmp:/tmp"
   labels:
     - "traefik.backend=ftt-location-server"
     - "traefik.frontend.rule=Host:ftt-location-server"
-    - "traefik.port=9000"
+    - "traefik.port=3000"
   log_opt:
     max-size: 50m
