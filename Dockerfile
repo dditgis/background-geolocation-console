@@ -9,4 +9,4 @@ COPY . .
 RUN npm install 
 
 EXPOSE 19000
-CMD ["npm","start"]
+CMD ["npm","run" , "server"]
