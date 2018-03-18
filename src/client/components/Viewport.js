@@ -43,7 +43,6 @@ class Viewport extends Component {
         <LoadingIndicator />
        
         <Panel className={Styles.workspace} bodyScroll={false}>
-          <HeaderView />
           <TooManyPointsWarning />
           
               <MapView />
