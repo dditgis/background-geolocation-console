@@ -41,34 +41,13 @@ class Viewport extends Component {
     return (
       <Layout className={Styles.viewport}>
         <LoadingIndicator />
-        <NavDrawer active={true} pinned={true} className={Styles.navDrawer}>
-          <FilterView />
-        </NavDrawer>
-        <Sidebar pinned={isLocationSelected} width={6}>
-          <LocationView />
-        </Sidebar>
+       
         <Panel className={Styles.workspace} bodyScroll={false}>
           <HeaderView />
           <TooManyPointsWarning />
-          <Tabs index={activeTabIndex} hideMode='display' onChange={this.changeActiveTabIndex} inverse>
-            <Tab label='Map'>
+          
               <MapView />
-            </Tab>
-            <Tab label='Data'>
-              <div
-                style={{
-                  position: 'absolute',
-                  flex: 1,
-                  overflow: 'auto',
-                  height: 'calc(100% - 160px)',
-                  width: 'calc(100% - 40px)',
-                }}
-              >
-                <WatchModeWarning />
-                <ListView style={{ width: 1300 }} />
-              </div>
-            </Tab>
-          </Tabs>
+          
         </Panel>
       </Layout>
     );
